@@ -12,7 +12,7 @@ function App() {
   );
 }
 function Card(){
-  return(
+  return( like
   <div className='col-lg-4'>
     <div className="card border-success mb-3" >
   <div className="card-header bg-transparent border-success">Header</div>
