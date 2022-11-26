@@ -1,31 +1,140 @@
 // import logo from './logo.svg';
 import './App.css';
+import Card from './Card'
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  let data = [
+    {
+      plan: "Free",
+      price: "0",
+
+      features: [
+        {
+          title: "Single User",
+          condition: true
+        },
+        {
+          title: "5GB Storage",
+          condition: true
+        },
+        {
+          title: "Unlimited Public Projects",
+          condition: true
+        },
+        {
+          title: "Community Access",
+          condition: true
+        },
+        {
+          title: "Unlimited Private Projects",
+          condition: false
+        },
+        {
+          title: "Dedicated phone support",
+          condition: false
+        },
+        {
+          title: "Free Subdomain",
+          condition: false
+        },
+        {
+          title: "Monthly status reports",
+          condition: false
+        }
+      ]
+
+    },
+    {
+      plan: "Plus",
+      price: "9",
+      features: [
+        {
+          title: <b>5 Users</b>,
+          condition: true
+        },
+        {
+          title: "50GB Storage",
+          condition: true
+        },
+        {
+          title: "Unlimited Public Projects",
+          condition: true
+        },
+        {
+          title: "Community Access",
+          condition: true
+        },
+        {
+          title: "Unlimited Private Projects",
+          condition: true
+        },
+        {
+          title: "Dedicated phone support",
+          condition: true
+        },
+        {
+          title: " Free Subdomain",
+          condition: true
+        },
+        {
+          title: "Monthly status reports",
+          condition: false
+        }
+      ]
+    },
+    {
+      plan: "Pro",
+      price: "49",
+      features: [
+        {
+          title: <b>Unlimited Users</b>,
+          condition: true
+        },
+        {
+          title: "150GB Storage",
+          condition: true
+        },
+        {
+          title: "Unlimited Public Projects",
+          condition: true
+        },
+        {
+          title: "Community Access",
+          condition: true
+        },
+        {
+          title: "Unlimited Private Projects",
+          condition: true
+        },
+        {
+          title: "Dedicated phone support",
+          condition: true
+        },
+        {
+          title: "Unlimited Free Subdomain",
+          condition: true
+        },
+        {
+          title: "Monthly status reports",
+          condition: true
+        }
+      ]
+    }
+  ]
   return (
-    <div className="App">
-        <div className='container'></div>
-        <div className='row'></div>
+    <section className='pricing py-5'>
+      <div className="container">
+        <div className='row'>
+          {data.map((price) => {
+            return <Card price={price} ></Card>
+          })}
+        </div>
 
-      <Card />
-    </div>
+
+      </div>
+    </section>
   );
-}
-function Card(){
-  return( like
-  <div className='col-lg-4'>
-    <div className="card border-success mb-3" >
-  <div className="card-header bg-transparent border-success">Header</div>
-  <div className="card-body text-success">
-    <h5 className="card-title">Success card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <div className="card-footer bg-transparent border-success">Footer</div>
-</div>
-  </div>
-
-  )
-
 }
 
 export default App;
